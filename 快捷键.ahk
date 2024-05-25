@@ -27,13 +27,7 @@ Return
 Send,#{tab}
 Return
 
-^left::
-SendEvent {LWin down}{LCtrl down}{Left down}{LWin up}{LCtrl up}{Left up} 
-Return
 
-^right::
-SendEvent {LWin down}{LCtrl down}{Right down}{LWin up}{LCtrl up}{Right up} 
-Return
 
 
 Alt::Return
@@ -120,3 +114,22 @@ Return
 $!9::
 	Send {Ctrl Down}{9}{Ctrl Up}
 Return
+
+; 使用Alt+左箭头实现Home键功能
+!Left::
+Send {Home}
+return
+
+; 使用Alt+右箭头实现End键功能
+!Right::
+Send {End}
+return
+
+!+Left::
+Send +{Home}
+return
+
+!+Right::
+Send +{End}
+return
+
